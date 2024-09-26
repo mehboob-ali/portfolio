@@ -11,8 +11,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="relative h-screen font-universe flex items-center bg-gradient-to-br from-black to-red-900 ">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black to-red-900 opacity-50 z-20"></div>
+    <div className="relative h-screen font-universe flex items-center bg-gradient-to-br from-black to-gray-800 overflow-hidden">
       {/* Background video */}
       {/* <video
         autoPlay
@@ -26,11 +25,11 @@ function App() {
 
       {/* MAIN CONTENT */}
 
-      <div className=" relative z-30 grid grid-cols-5 p-16">
-        <div className=" flex col-span-2">
+      <div className=" relative grid grid-cols-5 p-16 gap-8 ">
+        <div className=" flex col-span-2 items-center justify-center">
           <Menu />
         </div>
-        <div className=" z-30 col-span-3">
+        <div className=" col-span-3 overflow-y-scroll h-screen px-2 py-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
